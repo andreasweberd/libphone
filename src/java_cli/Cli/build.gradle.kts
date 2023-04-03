@@ -1,4 +1,3 @@
-
 plugins {
     id("java")
     application
@@ -9,9 +8,6 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    flatDir {
-        dirs("/home/andreasweber/Downloads/libphone/lib")
-    }
 }
 
 dependencies {
