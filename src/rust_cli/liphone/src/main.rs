@@ -4,7 +4,7 @@ use std::os::raw::{c_char, c_int, c_void};
 use std::ptr::{null_mut};
 use std::process::exit;
 
-// Struktur für den Zustand des Programms
+
 struct AppState {
     phone: *mut c_void,
     last_call_index: i32,

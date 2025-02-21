@@ -1,6 +1,6 @@
 use std::env;
 use std::fs;
-use std::path::PathBuf;
+use std::path::{absolute, PathBuf};
 
 fn main() {
     // Sucht das richtige Verzeichnis, in dem die Bibliothek liegt
@@ -19,7 +19,7 @@ fn main() {
     if !lib_path.exists() {
         panic!(
             "Library libphone.so.0 not found in {}. Ensure it exists or set LIBPHONE_LIB_DIR.",
-            lib_dir
+            absolute(&lib_path).unwrap().display()
         );
     }
 }
